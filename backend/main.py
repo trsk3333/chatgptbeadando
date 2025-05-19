@@ -18,5 +18,6 @@ class Query(BaseModel):
 
 @app.post("/ask")
 async def ask(query: Query):
-    answer = run_agent(query.question)
+    promt = ( "Please answer in the same language as the question is asked.\n\n" + query.question )
+    answer = run_agent(promt)
     return {"answer": answer}
