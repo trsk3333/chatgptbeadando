@@ -8,3 +8,5 @@ uvicorn
 pydantic
 python-dotenv
 requests
+google-search-results
+
