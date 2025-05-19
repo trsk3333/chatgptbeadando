@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def load_vectorstore():
-    loader = TextLoader("docs/sample_docs.txt")
+    loader = TextLoader("docs/electric_guitar_essay.txt")
     docs = loader.load()
     splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     split_docs = splitter.split_documents(docs)
