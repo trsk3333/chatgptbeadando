@@ -4,7 +4,7 @@ async function ask() {
 
   responseDiv.innerHTML = "Válasz folyamatban...";
 
-  const res = await fetch("http://localhost:8000/ask", {
+  const res = await fetch("https://chatgptbeadandobackend.onrender.com", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question })
