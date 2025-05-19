@@ -16,7 +16,7 @@ tools = [
 
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
-agent = initialize_agent(tools, llm, agent="zero-shot-react-description", memory=memory, verbose=True)
+agent = initialize_agent(tools, llm, agent="zero-shot-react-description", memory=memory, handle_parsing_errors=True, verbose=True)
 
 def run_agent(question: str) -> str:
     return agent.run(question)
